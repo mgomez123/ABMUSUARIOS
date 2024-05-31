@@ -26,4 +26,6 @@ public partial class Usuario
     public string? Ciudad { get; set; }
 
     public string? CodigoPostal { get; set; }
+
+
 }

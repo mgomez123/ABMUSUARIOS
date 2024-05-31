@@ -19,6 +19,11 @@ body {
     color: #FFFFFF; /* Establece el color del texto a blanco */
 }
 
+h1 {
+    font-family: 'Century Gothic', sans-serif; /* Cambiar la fuente para encabezados H1 */
+    font-weight: bold; /* Aumentar el grosor de la fuente */
+}
+
 .navbar {
     background: linear-gradient(135deg, #B51B75 0%, #640D6B 100%);
     color: white;
