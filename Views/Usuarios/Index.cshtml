@@ -1,0 +1,72 @@
+﻿@model IEnumerable<ABMUSUARIOS.Data.Usuario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="usuarios-text">
+    <img src="https://cdn-icons-png.flaticon.com/128/863/863823.png" alt="Icono" style="height: 30px; width: 30px; margin-right: 10px;">
+    Usuarios Ingresados</h1>
+
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Crear nuevo usuario</a>
+</p>
+<table class="table">
+    <thead>
+        <tr class="usuarios-text">
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contraseña)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+ 
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="usuarios-text">
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contraseña)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-primary">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-warning">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
